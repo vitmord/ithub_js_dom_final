@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Фитнес центр КАЧ</title>
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet" />
+
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/flaticon.css" type="text/css" />
+
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .container {
+                position: relative;
+            }
+
+            .mySlides {
+                display: none;
+            }
+
+            .cursor {
+                cursor: pointer;
+            }
+
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 40%;
+                width: auto;
+                padding: 16px;
+                margin-top: -50px;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
+
+            .caption-container {
+                text-align: center;
+                background-color: #222;
+                padding: 2px 16px;
+                color: white;
+            }
+
+            .row:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+
+            .column {
+                float: left;
+                width: 16.66%;
+            }
+
+            .demo {
+                opacity: 0.6;
+            }
+
+            .active,
+            .demo:hover {
+                opacity: 1;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="offcanvas-menu-overlay"></div>
+        <div class="offcanvas-menu-wrapper">
+            <div class="canvas-close">
+                <i class="fa fa-close"></i>
+            </div>
+            <nav class="canvas-menu mobile-menu">
+                <ul>
+                    <li><a href="#about-us">О нас</a></li>
+                    <li><a href="#classes">Программы</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+
+        <header class="header-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="img/logo.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a href="/index.html#about-us">О нас</a></li>
+                                <li><a href="gallery.html">Галерея</a></li>
+                                <li><a href="team.html">Команда</a></li>
+                                <li><a href="#contact">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="canvas-open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <div id="gallery" class="gallery-section spad">
+            <div class="container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/gallery/gallery-4.jpg" style="width: 100%" />
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/gallery/gallery-2.jpg" style="width: 100%" />
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img/gallery/gallery-3.jpg" style="width: 100%" />
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img/gallery/gallery-5.jpg" style="width: 100%" />
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="img/gallery/gallery-4.jpg" style="width: 100%" onclick="currentSlide(1)" alt="Подъем на бицепс" />
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="img/gallery/gallery-2.jpg" style="width: 100%" onclick="currentSlide(2)" alt="Махи сидя" />
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="img/gallery/gallery-3.jpg" style="width: 100%" onclick="currentSlide(3)" alt="Бег на беговой дорожке" />
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="img/gallery/gallery-5.jpg" style="width: 100%" onclick="currentSlide(5)" alt="Становая тяга" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="gallery">
+                <div class="grid-sizer"></div>
+                <div class="gs-item grid-wide set-bg" data-setbg="img/gallery/gallery-1.jpg">
+                    <a href="img/gallery/gallery-1.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                </div>
+                <div class="gs-item set-bg" data-setbg="img/gallery/gallery-2.jpg">
+                    <a href="img/gallery/gallery-2.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                </div>
+                <div class="gs-item set-bg" data-setbg="img/gallery/gallery-3.jpg">
+                    <a href="img/gallery/gallery-3.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                </div>
+                <div class="gs-item set-bg" data-setbg="img/gallery/gallery-4.jpg">
+                    <a href="img/gallery/gallery-4.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                </div>
+                <div class="gs-item set-bg" data-setbg="img/gallery/gallery-5.jpg">
+                    <a href="img/gallery/gallery-5.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                </div>
+                <div class="gs-item grid-wide set-bg" data-setbg="img/gallery/gallery-6.jpg">
+                    <a href="img/gallery/gallery-6.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                </div>
+            </div> -->
+        </div>
+
+        <section id="contacts" class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="fs-about">
+                            <div class="fa-logo">
+                                <a href="#"><img src="img/logo.svg" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="gt-text">
+                            <i class="fa fa-map-marker"></i>
+                            <p>
+                                Россия,<br />
+                                Москва
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="gt-text">
+                            <i class="fa fa-mobile"></i>
+                            <ul>
+                                <li>(495) 571-1-811</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="gt-text email">
+                            <i class="fa fa-envelope"></i>
+                            <p>info@kach-gym.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- <script src="js/main.js"></script> -->
+        <script>
+            let slideIndex = 1
+            showSlides(slideIndex)
+
+            function plusSlides(n) {
+                showSlides((slideIndex += n))
+            }
+
+            function currentSlide(n) {
+                showSlides((slideIndex = n))
+            }
+
+            function showSlides(n) {
+                let i
+                let slides = document.getElementsByClassName('mySlides')
+                let dots = document.getElementsByClassName('demo')
+                let captionText = document.getElementById('caption')
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none'
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(' active', '')
+                }
+                slides[slideIndex - 1].style.display = 'block'
+                dots[slideIndex - 1].className += ' active'
+                captionText.innerHTML = dots[slideIndex - 1].alt
+            }
+
+            document.body.addEventListener('keydown', function (e) {
+                switch (e.key) {
+                    case 'ArrowRight':
+                        plusSlides(1)
+                        break
+                    case 'ArrowLeft':
+                        plusSlides(-1)
+                        break
+                }
+            })
+        </script>
+    </body>
+</html>

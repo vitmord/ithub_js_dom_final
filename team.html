@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Фитнес центр КАЧ</title>
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet" />
+
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/flaticon.css" type="text/css" />
+
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <style>
+            .carousel {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .carousel-container {
+                margin-top: 50px;
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .carousel-button {
+                font-size: 16px;
+                text-align: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: none;
+                opacity: 50%;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+            }
+
+            .carousel-button:hover {
+                opacity: 100%;
+                cursor: pointer;
+            }
+
+            .image-container {
+                display: flex;
+                align-items: center;
+                width: 80%;
+                aspect-ratio: 16 / 9;
+                overflow: hidden;
+            }
+
+            .image-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                max-width: 100%;
+                min-width: 100%;
+            }
+
+            .wrapper-1 {
+                transition: margin 1s;
+            }
+
+            .carousel-image {
+                padding: 10px;
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .button-container-small {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+            }
+
+            .carousel-button-small {
+                display: none;
+            }
+
+            .carousel-button-small:hover {
+                opacity: 100%;
+                cursor: pointer;
+            }
+
+            @media (max-width: 1000px) {
+                .image-container {
+                    width: 100%;
+                }
+
+                .button-container {
+                    margin-bottom: 0px;
+                }
+
+                .carousel-button {
+                    display: none;
+                }
+
+                .carousel-button-small {
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 16px;
+                    padding: 10px 10% 10px 10%;
+                    border-radius: 0%;
+                    border: none;
+                    opacity: 50%;
+                    border-left: 1px solid black;
+                    border-right: 1px solid black;
+                }
+            }
+
+            @media (max-width: 700px) {
+                .carousel-container {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="offcanvas-menu-overlay"></div>
+        <div class="offcanvas-menu-wrapper">
+            <div class="canvas-close">
+                <i class="fa fa-close"></i>
+            </div>
+            <nav class="canvas-menu mobile-menu">
+                <ul>
+                    <li><a href="#about-us">О нас</a></li>
+                    <li><a href="#classes">Программы</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+
+        <header class="header-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="img/logo.svg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a href="/index.html#about-us">О нас</a></li>
+                                <li><a href="gallery.html">Галерея</a></li>
+                                <li><a href="team.html">Команда</a></li>
+                                <li><a href="#contacts">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="canvas-open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <section id="team" class="team-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="team-title">
+                            <div class="section-title">
+                                <span>Наша команда</span>
+                                <h2>Тренируйся с лучшими</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <section class="carousel">
+                        <div class="carousel-container">
+                            <button class="carousel-left carousel-button">L</button>
+                            <div class="image-container">
+                                <div class="image-wrapper wrapper-1 ts-item">
+                                    <img src="img/team/team-1.jpg" alt="Carousel Image" class="carousel-image" />
+                                    <div class="ts_text">
+                                        <h4>Оля</h4>
+                                        <span>Инструктор тренажерного зала</span>
+                                    </div>
+                                </div>
+
+                                <div class="image-wrapper ts-item">
+                                    <img src="img/team/team-2.jpg" alt="Carousel Image" class="carousel-image" />
+                                    <div class="ts_text">
+                                        <h4>Макс</h4>
+                                        <span>Инструктор тренажерного зала</span>
+                                    </div>
+                                </div>
+
+                                <div class="image-wrapper ts-item">
+                                    <img src="img/team/team-3.jpg" alt="Carousel Image" class="carousel-image" />
+                                    <div class="ts_text">
+                                        <h4>Никита</h4>
+                                        <span>Инструктор тренажерного зала</span>
+                                    </div>
+                                </div>
+
+                                <div class="image-wrapper ts-item">
+                                    <img src="img/team/team-4.jpg" alt="Carousel Image" class="carousel-image" />
+                                    <div class="ts_text">
+                                        <h4>Алексей</h4>
+                                        <span>Инструктор тренажерного зала</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-right carousel-button">R</button>
+                        </div>
+
+                        <div class="button-container-small">
+                            <button class="carousel-left-small carousel-button-small">L</button>
+                            <button class="carousel-right-small carousel-button-small">R</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="fs-about">
+                            <div class="fa-logo">
+                                <a href="#"><img src="img/logo.svg" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="gt-text">
+                            <i class="fa fa-map-marker"></i>
+                            <p>
+                                Россия,<br />
+                                Москва
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="gt-text">
+                            <i class="fa fa-mobile"></i>
+                            <ul>
+                                <li>(495) 571-1-811</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="gt-text email">
+                            <i class="fa fa-envelope"></i>
+                            <p>info@kach-gym.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            const wrapperOne = document.querySelector('.wrapper-1')
+            const leftButton = document.querySelector('.carousel-left')
+            const rightButton = document.querySelector('.carousel-right')
+            const leftButtonSmall = document.querySelector('.carousel-left-small')
+            const rightButtonSmall = document.querySelector('.carousel-right-small')
+            const imageContainer = document.querySelector('.image-container')
+
+            let track = 0
+
+            let counter = 1
+
+            const moveImagesLeft = function () {
+                if (counter < imageContainer.childElementCount) {
+                    counter++
+                    track = track - 100
+                    wrapperOne.style.marginLeft = `${track}%`
+                }
+            }
+
+            const moveImagesRight = function () {
+                if (counter > 1) {
+                    counter--
+                    track = track + 100
+                    wrapperOne.style.marginLeft = `${track}%`
+                }
+            }
+
+            rightButton.addEventListener('click', () => {
+                moveImagesLeft()
+            })
+
+            rightButtonSmall.addEventListener('click', () => {
+                moveImagesLeft()
+            })
+
+            leftButton.addEventListener('click', () => {
+                moveImagesRight()
+            })
+
+            leftButtonSmall.addEventListener('click', () => {
+                moveImagesRight()
+            })
+
+            document.body.addEventListener('keydown', function (e) {
+                switch (e.key) {
+                    case 'r':
+                        moveImagesLeft()
+                        break
+                    case 'l':
+                        moveImagesRight()
+                        break
+                }
+            })
+        </script>
+    </body>
+</html>
